@@ -22,17 +22,16 @@ const FormBooks = ({ onSubmit }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">
-          Book Title
           <input
             type="text"
             name="title"
             id="title"
+            placeholder="Book Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </label>
         <label htmlFor="author">
-          Book Author
           <select
             name="author"
             id="author"
