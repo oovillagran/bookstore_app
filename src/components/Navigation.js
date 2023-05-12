@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 export default function Navigation() {
   return (
     <>
-      <Navbar expand="lg" className="nav-bar">
+      <Navbar className="nav-bar">
         <Container>
           <Navbar.Brand href="/" className="brand">Bookstore CMS</Navbar.Brand>
           <Link className="nav-item" to="/">BOOKS</Link>
