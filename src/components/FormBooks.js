@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/bookSlice';
 
 const authors = [
   'Author',
@@ -7,21 +9,32 @@ const authors = [
   'Frank Herbert',
 ];
 
-const FormBooks = ({ onSubmit }) => {
+const FormBooks = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState(authors[0]);
+  const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit({ title, author });
-    setTitle('');
-    setAuthor(authors[0]);
+  const handleAddBook = () => {
+    const newBook = {
+      item_id: 'item4',
+      title: 'New Book',
+      author: 'Author',
+      category: 'Fiction',
+    };
+    dispatch(addBook(newBook));
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   onSubmit({ title, author });
+  //   setTitle('');
+  //   setAuthor(authors[0]);
+  // };
 
   return (
     <div>
-      <p>add book</p>
-      <form onSubmit={handleSubmit}>
+      <h3>add book</h3>
+      <form>
         <label htmlFor="title">
           <input
             type="text"
@@ -46,14 +59,14 @@ const FormBooks = ({ onSubmit }) => {
             ))}
           </select>
         </label>
-        <button type="submit">ADD BOOK</button>
+        <button type="button" onClick={handleAddBook}>ADD BOOK</button>
       </form>
     </div>
   );
 };
 
-FormBooks.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
+// FormBooks.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };
 
 export default FormBooks;
