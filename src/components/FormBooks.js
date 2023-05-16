@@ -20,6 +20,7 @@ const FormBooks = ({ onSubmit }) => {
 
   return (
     <div>
+      <p>add book</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">
           <input
