@@ -2,25 +2,21 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   booksList: [],
-  amount: 3,
-  total: 0,
-  isLoading: true,
 };
 
 const bookSlice = createSlice({
-  name: 'books',
+  name: 'book',
   initialState,
   reducers: {
-    addBooks: (state, action) => {
-      const itemId = action.payload;
-      state.booksList = [...state.booksList, (item) => item.id === itemId];
+    addBook: (state, action) => {
+      const newBook = action.payload;
+      state.booksList.push(newBook);
     },
-    removeBooks: (state, action) => {
-      const itemId = action.payload;
-      state.booksList = state.booksList.filter((item) => item.id !== itemId);
+    removeBook: (state, action) => {
+      state.booksList.filter((book) => book.id !== action.payload);
     },
   },
 });
 
-export const { addBooks, removeBooks } = bookSlice.actions;
+export const { removeBook } = bookSlice.actions;
 export default bookSlice.reducer;

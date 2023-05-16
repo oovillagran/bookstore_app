@@ -1,7 +1,7 @@
 import Book from './Book';
 import FormBooks from './FormBooks';
 
-const Booklist = () => {
+const BooksList = () => {
   const books = [
     {
       id: 1,
@@ -35,6 +35,7 @@ const Booklist = () => {
         {books.map((book) => (
           <Book
             key={book.id}
+            id={book.id}
             genre={book.genre}
             title={book.title}
             author={book.author}
@@ -48,4 +49,4 @@ const Booklist = () => {
   );
 };
 
-export default Booklist;
+export default BooksList;
