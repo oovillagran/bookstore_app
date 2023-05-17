@@ -3,14 +3,14 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/bookSlice';
 
 const Book = ({
-  item_id,
+  itemId,
   title,
   author,
   category,
 }) => {
   const dispatch = useDispatch();
   const handleRemove = () => {
-    dispatch(removeBook(item_id));
+    dispatch(removeBook(itemId));
   };
 
   return (
@@ -32,7 +32,7 @@ const Book = ({
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  item_id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
 
