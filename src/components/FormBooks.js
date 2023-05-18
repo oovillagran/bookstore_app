@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
 
 const FormBooks = () => {
@@ -10,6 +10,7 @@ const FormBooks = () => {
     title: '',
     author: '',
     item_id: '',
+    category: '',
   });
 
   const onStateUpdate = ({ target }) => {
@@ -22,7 +23,11 @@ const FormBooks = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    if (formList.title.trim().length <= 0 || formList.author.trim().length <= 0) {
+    if (
+      formList.title.trim().length <= 0
+      || formList.author.trim().length <= 0
+      || formList.category.trim().length <= 0
+    ) {
       return;
     }
 
@@ -35,6 +40,7 @@ const FormBooks = () => {
       title: '',
       author: '',
       item_id: '',
+      category: '',
     });
   };
 
@@ -59,6 +65,15 @@ const FormBooks = () => {
             value={formList.author}
             onChange={onStateUpdate}
             placeholder="Book Author"
+          />
+        </label>
+        <label htmlFor="category">
+          <input
+            name="category"
+            id="category"
+            value={formList.category}
+            onChange={onStateUpdate}
+            placeholder="Book Category"
           />
         </label>
         <button type="submit">ADD BOOK</button>
