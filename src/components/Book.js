@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { deleteBook, fetchBooks } from '../redux/books/bookSlice';
 
 const Book = ({
   itemId,
@@ -9,8 +10,24 @@ const Book = ({
   category,
 }) => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    fetchBooks();
+  }, [dispatch]);
+
   const handleRemove = () => {
-    dispatch(removeBook(itemId));
+    setIsLoading(true);
+    dispatch(deleteBook(itemId)).then(() => {
+      setIsLoading(false);
+      dispatch(fetchBooks());
+    }).catch(() => {
+      setIsLoading(false);
+    });
+
+    if (isLoading) {
+      <div>Loading...</div>;
+    }
   };
 
   return (

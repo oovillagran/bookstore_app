@@ -12,10 +12,8 @@ const initialState = {
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
     const response = await axios.get(URL);
-    console.log(response.data);
     return response.data;
   } catch (error) {
-    console.log(error);
     return error.message;
   }
 });
@@ -24,23 +22,24 @@ export const addNewBook = createAsyncThunk('books/addBook', async (newBookAdded)
   try {
     const response = await axios.post(URL, newBookAdded);
     return response.data;
-  } catch (err) {
-    return err.message;
+  } catch (error) {
+    return error.message;
+  }
+});
+
+export const deleteBook = createAsyncThunk('books/deleteBook', async (bookId) => {
+  try {
+    const response = await axios.delete(`${URL}/${bookId}`);
+    return response.data;
+  } catch (error) {
+    return error.message;
   }
 });
 
 const bookSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      const newBook = action.payload;
-      state.booksList.push(newBook);
-    },
-    removeBook: (state, action) => {
-      state.booksList = state.booksList.filter((book) => book.item_id !== action.payload);
-    },
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(fetchBooks.pending, (state) => {
@@ -61,5 +60,5 @@ export const selectAllBooks = (state) => state.book.booksList;
 export const getBooksStatus = (state) => state.book.status;
 export const getBooksError = (state) => state.book.error;
 
-export const { removeBook, addBook } = bookSlice.actions;
+// export const { removeBook, addBook } = bookSlice.actions;
 export default bookSlice.reducer;
