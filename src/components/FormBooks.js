@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { useDispatch } from 'react-redux';
+// import { addBook } from '../redux/books/bookSlice';
+import { addNewBook, fetchBooks } from '../redux/books/bookSlice';
 
 const FormBooks = () => {
   const dispatch = useDispatch();
+
+  const [isLoading, setIsLoading] = useState(false); // added
+
+  useEffect(() => {
+    fetchBooks();
+  }, [dispatch]);
 
   const [formList, setForm] = useState({
     title: '',
@@ -31,17 +38,26 @@ const FormBooks = () => {
       return;
     }
 
-    dispatch(addBook({
+    setIsLoading(true);
+    dispatch(addNewBook({
       ...formList,
       item_id: uuidv4(),
-    }));
-
-    setForm({
-      title: '',
-      author: '',
-      item_id: '',
-      category: '',
+    })).then(() => {
+      setIsLoading(false);
+      setForm({
+        title: '',
+        author: '',
+        item_id: '',
+        category: '',
+      });
+      dispatch(fetchBooks());
+    }).catch(() => {
+      setIsLoading(false);
     });
+
+    if (isLoading) {
+      <div>Loading...</div>;
+    }
   };
 
   return (
