@@ -5,3 +5,54 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.ff-m {
+  font-family:'Montserrat', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.nav-bar {
+  outline: solid 1px black;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.813rem 6.188rem 1.813rem 6.25rem;
+}
+
+#brand {
+  font-weight: 700;
+  font-size: 1.875rem;
+  height: 2.313rem;
+  color: #0290ff;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.813rem;
+  color: #121212;
+  height: 1rem;
+  opacity: 0.5;
+  letter-spacing: 1.9px;
+  margin: 0 2.563rem 0 2.938rem;
+}
+
+.nav-item:focus {
+  opacity: 1;
+}
+
+.person {
+  color: #0290ff;
+  font-size: 1.063rem;
+  margin: auto;
+  text-align: center;
+}
+
+.icon {
+  outline: #e8e8e8 2px solid;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+}
