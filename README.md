@@ -145,7 +145,6 @@ To run tests, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Connect to API**
 - [ ] **Styling.**
 
 

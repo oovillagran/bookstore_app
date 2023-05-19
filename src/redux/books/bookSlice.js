@@ -60,5 +60,4 @@ export const selectAllBooks = (state) => state.book.booksList;
 export const getBooksStatus = (state) => state.book.status;
 export const getBooksError = (state) => state.book.error;
 
-// export const { removeBook, addBook } = bookSlice.actions;
 export default bookSlice.reducer;

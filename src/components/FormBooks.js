@@ -6,7 +6,7 @@ import { addNewBook, fetchBooks } from '../redux/books/bookSlice';
 const FormBooks = () => {
   const dispatch = useDispatch();
 
-  const [isLoading, setIsLoading] = useState(false); // added
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetchBooks();
