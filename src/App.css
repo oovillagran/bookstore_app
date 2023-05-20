@@ -7,11 +7,11 @@
 }
 
 .ff-m {
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ff-m-b {
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .main {
- background-color: #f5f6fa;
- padding: 2.313rem 0 16.563rem;
+  background-color: #f5f6fa;
+  padding: 2.313rem 0 16.563rem;
 }
 
 .book-container {
@@ -226,7 +226,7 @@
 .form-title {
   margin: 0;
   text-transform: uppercase;
-  color: #888888;
+  color: #888;
   font-size: 1.25rem;
   letter-spacing: -0.18px;
 }
@@ -272,11 +272,11 @@ input::placeholder {
   letter-spacing: -0.15px;
 }
 
-@media only screen and (max-width: 768px ){
+@media only screen and (max-width: 768px) {
   .nav-bar {
     margin: 0.5rem;
   }
-  
+
   #brand {
     font-size: 0.35rem;
   }
