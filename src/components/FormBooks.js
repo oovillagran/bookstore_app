@@ -60,11 +60,12 @@ const FormBooks = () => {
   };
 
   return (
-    <div>
-      <h3>add book</h3>
-      <form className="form" onSubmit={onSubmit}>
+    <div className="form">
+      <h3 className="form-title ff-m-b">add book</h3>
+      <form className="form-data flex" onSubmit={onSubmit}>
         <label htmlFor="title">
           <input
+            className="input-data"
             type="text"
             name="title"
             id="title"
@@ -75,6 +76,7 @@ const FormBooks = () => {
         </label>
         <label htmlFor="author">
           <input
+            className="input-data"
             name="author"
             id="author"
             value={formList.author}
@@ -84,6 +86,7 @@ const FormBooks = () => {
         </label>
         <label htmlFor="category">
           <input
+            className="input-data"
             name="category"
             id="category"
             value={formList.category}
@@ -91,7 +94,7 @@ const FormBooks = () => {
             placeholder="Book Category"
           />
         </label>
-        <button type="submit">ADD BOOK</button>
+        <button className="input-data" type="submit">add book</button>
       </form>
     </div>
   );

@@ -4,7 +4,7 @@ import { IoIosPerson } from 'react-icons/io';
 
 export default function Navigation() {
   return (
-    <>
+    <div className="header">
       <div className="nav-bar flex">
         <div className="nav-container">
           <Navbar.Brand href="/" className="brand ff-m" id="brand">Bookstore CMS</Navbar.Brand>
@@ -15,6 +15,6 @@ export default function Navigation() {
           <IoIosPerson className="person" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
