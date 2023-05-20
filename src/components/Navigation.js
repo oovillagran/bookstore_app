@@ -9,7 +9,7 @@ export default function Navigation() {
         <div className="nav-container">
           <Navbar.Brand href="/" className="brand ff-m" id="brand">Bookstore CMS</Navbar.Brand>
           <Link className="nav-item ff-m" to="/">books</Link>
-          <Link className="nav-item ff-m" to="/categories">categories</Link>
+          <Link className="nav-item category ff-m" to="/categories">categories</Link>
         </div>
         <div className="icon flex">
           <IoIosPerson className="person" />

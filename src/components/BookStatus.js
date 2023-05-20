@@ -1,6 +1,6 @@
 export default function BookStatus() {
   return (
-    <div className="statics flex">
+    <div className="statistics flex">
       <div className="progress-data flex">
         <div className="flex circle-container">
           <div className="circle" />
