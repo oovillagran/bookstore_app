@@ -41,7 +41,6 @@
 }
 
 .nav-bar {
-  outline: solid 1px black;
   justify-content: space-between;
   align-items: center;
   margin: 1.813rem 6.188rem 1.813rem 6.25rem;
@@ -97,7 +96,6 @@
 
 .book {
   width: 34.938rem;
-  outline: black 2px solid;
   padding: 2rem 0 1.75rem 1.688rem;
 }
 
@@ -224,15 +222,49 @@
 
 .form-title {
   margin: 0;
-  text-transform: uppercase; 
+  text-transform: uppercase;
+  color: #888888;
+  font-size: 1.25rem;
+  letter-spacing: -0.18px;
 }
 
 .form-data {
   margin: 2rem 0 0;
-  outline: red 2px solid;
   gap: 2.125rem;
+}
+
+.input-title {
+  flex-grow: 5;
+  border: #e8e8e8;
+  outline: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding-left: 1.063rem;
 }
 
 .input-data {
   height: 2.813rem;
+  flex-grow: 1;
+  border-radius: 4px;
+  border: none;
+  outline: 1px solid #e8e8e8;
+  padding-left: 1.063rem;
+}
+
+.form-btn {
+  text-transform: uppercase;
+  background-color: #0290ff;
+  color: #fff;
+  font-size: 0.813rem;
+  width: 11.5rem;
+  border-radius: 3px;
+  border: none;
+  letter-spacing: 0.5px;
+  height: 2.813rem;
+}
+
+input::placeholder {
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
 }

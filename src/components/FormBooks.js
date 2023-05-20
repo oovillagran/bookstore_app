@@ -61,40 +61,34 @@ const FormBooks = () => {
 
   return (
     <div className="form">
-      <h3 className="form-title ff-m-b">add book</h3>
+      <h3 className="form-title ff-m-b">add new book</h3>
       <form className="form-data flex" onSubmit={onSubmit}>
-        <label htmlFor="title">
-          <input
-            className="input-data"
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Book Title"
-            value={formList.title}
-            onChange={onStateUpdate}
-          />
-        </label>
-        <label htmlFor="author">
-          <input
-            className="input-data"
-            name="author"
-            id="author"
-            value={formList.author}
-            onChange={onStateUpdate}
-            placeholder="Book Author"
-          />
-        </label>
-        <label htmlFor="category">
-          <input
-            className="input-data"
-            name="category"
-            id="category"
-            value={formList.category}
-            onChange={onStateUpdate}
-            placeholder="Book Category"
-          />
-        </label>
-        <button className="input-data" type="submit">add book</button>
+        <input
+          className="input-title"
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Book Title"
+          value={formList.title}
+          onChange={onStateUpdate}
+        />
+        <input
+          className="input-data"
+          name="author"
+          id="author"
+          value={formList.author}
+          onChange={onStateUpdate}
+          placeholder="Book Author"
+        />
+        <input
+          className="input-data"
+          name="category"
+          id="category"
+          value={formList.category}
+          onChange={onStateUpdate}
+          placeholder="Book Category"
+        />
+        <button className="form-btn ff-r-b" type="submit">add book</button>
       </form>
     </div>
   );
