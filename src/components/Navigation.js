@@ -6,10 +6,10 @@ export default function Navigation() {
   return (
     <div className="header">
       <div className="nav-bar flex">
-        <div className="nav-container">
-          <Navbar.Brand href="/" className="brand ff-m" id="brand">Bookstore CMS</Navbar.Brand>
-          <Link className="nav-item ff-m" to="/">books</Link>
-          <Link className="nav-item category ff-m" to="/categories">categories</Link>
+        <div className="nav-container flex">
+          <Navbar href="/" className="brand" id="brand">Bookstore CMS</Navbar>
+          <Link className="nav-item" to="/">books</Link>
+          <Link className="nav-item category" to="/categories">categories</Link>
         </div>
         <div className="icon flex">
           <IoIosPerson className="person" />

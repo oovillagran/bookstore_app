@@ -35,16 +35,16 @@ const Book = ({
     <section className="book-container flex">
       <div className="book">
         <div>
-          <p className=" book-category ff-m-b">{category}</p>
-          <h2 className="book-title ff-r-b">{title}</h2>
-          <p className="book-author ff-r-s">{author}</p>
+          <p className=" book-category">{category}</p>
+          <h2 className="book-title roboto">{title}</h2>
+          <p className="book-author roboto">{author}</p>
         </div>
         <div className="book-btn-section flex">
-          <button className="book-btn ff-r-s" type="button">comments</button>
+          <button className="book-btn roboto" type="button">comments</button>
           <span className="bar-btn" />
-          <button className="book-btn ff-r-s remove-btn" type="button" onClick={handleRemove}>remove</button>
+          <button className="book-btn roboto remove-btn" type="button" onClick={handleRemove}>remove</button>
           <span className="bar-btn" />
-          <button className="book-btn ff-r-s" type="button">edit</button>
+          <button className="book-btn roboto" type="button">edit</button>
         </div>
       </div>
       <BookStatus />

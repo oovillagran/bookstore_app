@@ -61,7 +61,7 @@ const FormBooks = () => {
 
   return (
     <div className="form">
-      <h3 className="form-title ff-m-b">add new book</h3>
+      <h3 className="form-title">add new book</h3>
       <form className="form-data flex" onSubmit={onSubmit}>
         <input
           className="input-title"
@@ -88,7 +88,7 @@ const FormBooks = () => {
           onChange={onStateUpdate}
           placeholder="Book Category"
         />
-        <button className="form-btn ff-r-b" type="submit">add book</button>
+        <button className="form-btn roboto" type="submit">add book</button>
       </form>
     </div>
   );

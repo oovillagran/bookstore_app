@@ -4,25 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.ff-m {
   font-family: 'Montserrat', sans-serif;
 }
 
-.ff-m-b {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-.ff-r-s {
+.roboto {
   font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-}
-
-.ff-r-b {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 700;
 }
 
 .flex {
@@ -41,11 +27,14 @@
 
 .nav-bar {
   justify-content: space-between;
-  align-items: center;
   margin: 1.813rem 6.188rem 1.813rem 6.25rem;
 }
 
-#brand {
+.nav-container {
+  align-items: center;
+}
+
+.brand {
   font-weight: 700;
   font-size: 1.875rem;
   height: 2.313rem;
@@ -135,12 +124,14 @@
   font-size: 0.875rem;
   opacity: 0.5;
   margin-bottom: 0.25rem;
+  font-weight: 700;
 }
 
 .book-title {
   font-size: 1.375rem;
   letter-spacing: -0.2px;
   margin: 0;
+  font-weight: 700;
 }
 
 .book-author {
@@ -229,6 +220,7 @@
   color: #888;
   font-size: 1.25rem;
   letter-spacing: -0.18px;
+  font-weight: 700;
 }
 
 .form-data {
@@ -263,11 +255,11 @@
   border: none;
   letter-spacing: 0.5px;
   height: 2.813rem;
+  font-weight: 700;
 }
 
 input::placeholder {
   color: #c4c4c4;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   letter-spacing: -0.15px;
 }
@@ -277,7 +269,7 @@ input::placeholder {
     margin: 0.5rem;
   }
 
-  #brand {
+  .brand {
     font-size: 0.35rem;
   }
 
