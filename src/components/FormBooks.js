@@ -60,38 +60,35 @@ const FormBooks = () => {
   };
 
   return (
-    <div>
-      <h3>add book</h3>
-      <form className="form" onSubmit={onSubmit}>
-        <label htmlFor="title">
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="Book Title"
-            value={formList.title}
-            onChange={onStateUpdate}
-          />
-        </label>
-        <label htmlFor="author">
-          <input
-            name="author"
-            id="author"
-            value={formList.author}
-            onChange={onStateUpdate}
-            placeholder="Book Author"
-          />
-        </label>
-        <label htmlFor="category">
-          <input
-            name="category"
-            id="category"
-            value={formList.category}
-            onChange={onStateUpdate}
-            placeholder="Book Category"
-          />
-        </label>
-        <button type="submit">ADD BOOK</button>
+    <div className="form">
+      <h3 className="form-title">add new book</h3>
+      <form className="form-data flex" onSubmit={onSubmit}>
+        <input
+          className="input-title"
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Book Title"
+          value={formList.title}
+          onChange={onStateUpdate}
+        />
+        <input
+          className="input-data"
+          name="author"
+          id="author"
+          value={formList.author}
+          onChange={onStateUpdate}
+          placeholder="Book Author"
+        />
+        <input
+          className="input-data"
+          name="category"
+          id="category"
+          value={formList.category}
+          onChange={onStateUpdate}
+          placeholder="Book Category"
+        />
+        <button className="form-btn roboto" type="submit">add book</button>
       </form>
     </div>
   );

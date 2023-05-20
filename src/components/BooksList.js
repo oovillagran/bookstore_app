@@ -36,12 +36,13 @@ const BooksList = () => {
   }
 
   return (
-    <>
+    <div className="main">
       <div>
         {content}
       </div>
+      <hr className="division" />
       <FormBooks />
-    </>
+    </div>
   );
 };
 

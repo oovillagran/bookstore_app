@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBook, fetchBooks } from '../redux/books/bookSlice';
+import BookStatus from './BookStatus';
 
 const Book = ({
   itemId,
@@ -31,18 +32,23 @@ const Book = ({
   };
 
   return (
-    <>
-      <div>
-        <p>{category}</p>
-        <h2>{title}</h2>
-        <p>{author}</p>
+    <section className="book-container flex">
+      <div className="book">
+        <div>
+          <p className=" book-category">{category}</p>
+          <h2 className="book-title roboto">{title}</h2>
+          <p className="book-author roboto">{author}</p>
+        </div>
+        <div className="book-btn-section flex">
+          <button className="book-btn roboto" type="button">comments</button>
+          <span className="bar-btn" />
+          <button className="book-btn roboto remove-btn" type="button" onClick={handleRemove}>remove</button>
+          <span className="bar-btn" />
+          <button className="book-btn roboto" type="button">edit</button>
+        </div>
       </div>
-      <div>
-        <button type="button">comments</button>
-        <button className="remove-btn" type="button" onClick={handleRemove}>remove</button>
-        <button type="button">edit</button>
-      </div>
-    </>
+      <BookStatus />
+    </section>
   );
 };
 
